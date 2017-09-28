@@ -1,0 +1,5 @@
+c:\users\darre\documents\visual studio 2017\Projects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.csprojResolveAssemblyReference.cache
+C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\bin\Debug\VendingMachine.exe
+C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\bin\Debug\VendingMachine.pdb
+C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.exe
+C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.pdb
