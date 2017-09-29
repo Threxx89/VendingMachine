@@ -51,7 +51,7 @@ namespace VendingMachine.Product
         #region Override
         public override string ToString()
         {
-            return Name;
+            return string.Format("{0} : {1}",Name,Cost) ;
         }
         #endregion
     }

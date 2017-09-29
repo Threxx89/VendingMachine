@@ -44,15 +44,17 @@
     <Compile Include="Currency\CurrencyTypeEnum.cs" />
     <Compile Include="Currency\Money.cs" />
     <Compile Include="Currency\Yen.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="IVendingMachine.cs" />
+    <Compile Include="Machine\Item.cs" />
+    <Compile Include="Machine\IVendingMachine.cs" />
+    <Compile Include="Menu\CreateMenu.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
     <Compile Include="Product\IProduct.cs" />
     <Compile Include="Product\ProductTypeEnum.cs" />
     <Compile Include="Product\Soda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SodaVendingMachine.cs" />
-    <Compile Include="VendingMachineException.cs" />
+    <Compile Include="Machine\SodaVendingMachine.cs" />
+    <Compile Include="Machine\VendingMachineException.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
