@@ -3,3 +3,8 @@ C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachi
 C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\bin\Debug\VendingMachine.pdb
 C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.exe
 C:\Users\Darre\Documents\Visual Studio 2017\Projects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.pdb
+E:\PetProjects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.csprojResolveAssemblyReference.cache
+E:\PetProjects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.exe
+E:\PetProjects\VendingMachine\VendingMachine\obj\Debug\VendingMachine.pdb
+E:\PetProjects\VendingMachine\VendingMachine\bin\Debug\VendingMachine.exe
+E:\PetProjects\VendingMachine\VendingMachine\bin\Debug\VendingMachine.pdb

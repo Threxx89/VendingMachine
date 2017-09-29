@@ -9,7 +9,7 @@ namespace VendingMachine.Menu
     {
         #region Private Members
         private List<MenuItem> m_MenuItems;
-        private bool m_ShouldExit;
+        private bool m_ShouldExit = false;
         #endregion
     
         #region Properties
@@ -40,13 +40,24 @@ namespace VendingMachine.Menu
             }
         }
 
-        private void PerformMenuItem(ConsoleKeyInfo keyInfo)
+        public void PerformMenuItem(ConsoleKeyInfo keyInfo)
         {
             MenuItem selectedItem = MenuItems.FirstOrDefault(x => x.ConsoleKey == keyInfo.Key);
             if (selectedItem != null)
             {
                 Console.WriteLine(selectedItem.Execute());
             }
+        }
+
+        public static CreatedMenu _GenerateMenu<T>(List<T> possibleMenuItem)
+        {
+            int counter = 65;
+            CreatedMenu newMenu = new CreatedMenu();
+            foreach (T item in possibleMenuItem)
+            {
+                newMenu.MenuItems.Add(new MenuItem((ConsoleKey)ConsoleKey.Parse(typeof(ConsoleKey), counter.ToString()),item.ToString()));
+            }
+            return newMenu;
         }
     }
 }
