@@ -13,7 +13,7 @@ namespace VendingMachine.Machine
 
         List<Item> VendingMachineProducts { get;}
 
-        IProduct Buy(string itemCode);
+        IProduct Buy(IProduct itemCode);
 
         void InsertMoney(Money money);
 

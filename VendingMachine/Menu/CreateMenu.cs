@@ -9,7 +9,7 @@ namespace VendingMachine.Menu
     {
         #region Private Members
         private List<MenuItem> m_MenuItems;
-        private bool m_ShouldExit = false;
+        private static bool m_ShouldExit = false;
         #endregion
     
         #region Properties
@@ -24,6 +24,10 @@ namespace VendingMachine.Menu
             {
                 return m_ShouldExit;
             }
+            set
+            {
+                m_ShouldExit = true;
+            }
         }
         #endregion
 
@@ -36,17 +40,18 @@ namespace VendingMachine.Menu
         {
             foreach (MenuItem item in m_MenuItems)
             {
-                Console.WriteLine(string.Format("{0} : {1}.",item.ConsoleKey,item.Name));
+                Console.WriteLine(string.Format("{0} : {1}.",item.ConsoleKey,item.Item.ToString()));
             }
         }
 
-        public void PerformMenuItem(ConsoleKeyInfo keyInfo)
+        public object PerformMenuItem(ConsoleKeyInfo keyInfo)
         {
             MenuItem selectedItem = MenuItems.FirstOrDefault(x => x.ConsoleKey == keyInfo.Key);
             if (selectedItem != null)
             {
-                Console.WriteLine(selectedItem.Execute());
+               return selectedItem.Execute();
             }
+            return string.Empty;
         }
 
         public static CreatedMenu _GenerateMenu<T>(List<T> possibleMenuItem)
@@ -55,9 +60,17 @@ namespace VendingMachine.Menu
             CreatedMenu newMenu = new CreatedMenu();
             foreach (T item in possibleMenuItem)
             {
-                newMenu.MenuItems.Add(new MenuItem((ConsoleKey)ConsoleKey.Parse(typeof(ConsoleKey), counter.ToString()),item.ToString()));
+                newMenu.MenuItems.Add(new MenuItem((ConsoleKey)ConsoleKey.Parse(typeof(ConsoleKey), counter.ToString()), (T)item));
+                counter++;
             }
+            newMenu.MenuItems.Add(new MenuItem((ConsoleKey)ConsoleKey.Parse(typeof(ConsoleKey), counter.ToString()), "Exit",_Exit));
             return newMenu;
+        }
+
+        private static object _Exit()
+        {
+            m_ShouldExit = true;
+            return null;
         }
     }
 }

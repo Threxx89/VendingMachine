@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using VendingMachine.Currency;
 using VendingMachine.Machine;
 using VendingMachine.Menu;
@@ -12,26 +13,17 @@ namespace VendingMachine
     class Program
     {
        public static SodaVendingMachine VendingMachine = null;
-
+        public static CreatedMenu MainMenu = null;
         static void Main(string[] args)
         {
             VendingMachine = new SodaVendingMachine(CurrencyType.Yen);
-            CreatedMenu mainMenu = _GenerateMainMenu();
-            mainMenu.DrawMenu();
-            while (!mainMenu.ShouldClose)
+            MainMenu = _GenerateMainMenu();
+            MainMenu.DrawMenu();
+            while (!MainMenu.ShouldClose)
             {
-                mainMenu.PerformMenuItem(Console.ReadKey());
+                Console.WriteLine(MainMenu.PerformMenuItem(Console.ReadKey()));
             }
-            VendingMachine.InsertMoney(new Money(CurrencyType.Yen, Convert.ToInt32(Console.ReadLine())));
-
-
-           // Console.WriteLine(VendingMachine.Buy(value)); 
-            List<Denomination> change = VendingMachine.GiveChange();
-            foreach (Denomination item in change)
-            {
-                Console.WriteLine(VendingMachine.Currency.Symbol + "" + item.Value);
-            }
-
+            Console.WriteLine("Press Any Key To Close....");
             Console.ReadKey();
         }
 
@@ -52,33 +44,38 @@ namespace VendingMachine
             {
             Console.Clear();
             productMenu.DrawMenu();
-            Console.WriteLine("Please insert money");
+            Console.WriteLine("Please insert money...");
             Money insertedMoney = new Money(VendingMachine.Currency.CurrencyType, Convert.ToInt32(Console.ReadLine()));
             VendingMachine.InsertMoney(insertedMoney);
 
-         
-                //productMenu.PerformMenuItem(Console.ReadKey());
-                Console.WriteLine("EnterItemCode");
-                Console.WriteLine(VendingMachine.Buy(Console.ReadLine()));
+                Console.WriteLine("Please select item...");
+                Item productItem = (Item)productMenu.PerformMenuItem(Console.ReadKey());
+                if (productItem != null)
+                {
+                    Console.WriteLine(VendingMachine.Buy(productItem.Product));
+                }
                 List<Denomination> change = VendingMachine.GiveChange();
+                Console.WriteLine("Giving Change.");
                 foreach (Denomination changeItem in change)
                 {
-                    Console.WriteLine(string.Format("{0}{1}",VendingMachine.Currency.Symbol,changeItem.Value));
+                    Console.WriteLine(string.Format("{0}{1}", VendingMachine.Currency.Symbol, changeItem.Value));
                 }
-                Console.WriteLine("Press any button to continue .....");
-                Console.ReadKey();
+
+                Console.WriteLine("Transaction Completed");
+                Thread.Sleep(3000);
             }
-            return "buy me";
+            return "Exiting Buy Menu";
         }
 
         private static string _Exit()
         {
-            return "Closed";
+            MainMenu.ShouldClose = true;
+            return "Exting Application";
         }
 
         private static string _Restock()
         {
-            return "has restocked";
+            return "Exting Restock Menu";
         }
     }
 }

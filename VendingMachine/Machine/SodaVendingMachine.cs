@@ -42,11 +42,11 @@ namespace VendingMachine.Machine
         #endregion
 
         #region Public Methods
-        public IProduct Buy(string itemCode)
+        public IProduct Buy(IProduct selectedProduct)
         {
             try
             {
-                IProduct selectedItem = VendingMachineProducts.FirstOrDefault(x => x.Product.Name == itemCode).Product;
+                IProduct selectedItem = VendingMachineProducts.FirstOrDefault(x => x.Product.Name == selectedProduct.Name).Product;
                 if (selectedItem != null)
                 {
                     m_InsertedMoney = m_InsertedMoney - selectedItem.Cost;
