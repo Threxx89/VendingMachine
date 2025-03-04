@@ -9,6 +9,7 @@ namespace VendingMachine.Currency
     {
         Rand,
         Yen,
-        Euro
+        Euro,
+        Dollar
     }
 }

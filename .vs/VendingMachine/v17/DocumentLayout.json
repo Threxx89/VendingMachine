@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\private\\VendingMachine\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|e:\\private\\vendingmachine\\vendingmachine\\currency\\dollar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|solutionrelative:vendingmachine\\currency\\dollar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|E:\\private\\VendingMachine\\vendingmachine\\currency\\yen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|solutionrelative:vendingmachine\\currency\\yen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|E:\\private\\VendingMachine\\vendingmachine\\currency\\currencytypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|solutionrelative:vendingmachine\\currency\\currencytypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|E:\\private\\VendingMachine\\vendingmachine\\currency\\icurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5FACF5E-C44B-4D13-B789-E3F177158742}|VendingMachine\\VendingMachine.csproj|solutionrelative:vendingmachine\\currency\\icurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CurrencyTypeEnum.cs",
+              "DocumentMoniker": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\CurrencyTypeEnum.cs",
+              "RelativeDocumentMoniker": "VendingMachine\\Currency\\CurrencyTypeEnum.cs",
+              "ToolTip": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\CurrencyTypeEnum.cs",
+              "RelativeToolTip": "VendingMachine\\Currency\\CurrencyTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:36:59.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICurrency.cs",
+              "DocumentMoniker": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\ICurrency.cs",
+              "RelativeDocumentMoniker": "VendingMachine\\Currency\\ICurrency.cs",
+              "ToolTip": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\ICurrency.cs",
+              "RelativeToolTip": "VendingMachine\\Currency\\ICurrency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:36:10.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dollar.cs",
+              "DocumentMoniker": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\Dollar.cs",
+              "RelativeDocumentMoniker": "VendingMachine\\Currency\\Dollar.cs",
+              "ToolTip": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\Dollar.cs",
+              "RelativeToolTip": "VendingMachine\\Currency\\Dollar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:36:01.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Yen.cs",
+              "DocumentMoniker": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\Yen.cs",
+              "RelativeDocumentMoniker": "VendingMachine\\Currency\\Yen.cs",
+              "ToolTip": "E:\\private\\VendingMachine\\VendingMachine\\Currency\\Yen.cs",
+              "RelativeToolTip": "VendingMachine\\Currency\\Yen.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:35:42.415Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
