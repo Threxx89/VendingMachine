@@ -59,15 +59,15 @@ namespace VendingMachine.Machine
             while (m_InsertedMoney > 0)
             {
                 int currentValue;
-                int previouseValue = 0;
+                int previousValue = 0;
                 Denomination value = null;
 
                 foreach (Denomination item in Currency.GetCurrencyDenominations())
                 {
                     currentValue = (int)m_InsertedMoney / item.Value;
-                    if (currentValue < previouseValue && currentValue > 0 || previouseValue == 0)
+                    if (currentValue < previousValue && currentValue > 0 || previousValue == 0)
                     {
-                        previouseValue = currentValue;
+                        previousValue = currentValue;
                         value = item;
                     }
                 }
@@ -82,8 +82,13 @@ namespace VendingMachine.Machine
         {
             if (money.CurrencyType == m_Currency.CurrencyType)
             {
-                m_InsertedMoney += money.Amount;
+                UpdateMoney(money);
             }
+        }
+
+        public void UpdateMoney(Money money)
+        {
+            m_InsertedMoney = money.Amount *2 + m_InsertedMoney;
         }
 
         public bool Restock(IProduct product, int amount)
@@ -118,4 +123,4 @@ namespace VendingMachine.Machine
         #endregion
     }
 }
-}
+
