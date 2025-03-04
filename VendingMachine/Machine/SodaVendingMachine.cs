@@ -119,7 +119,7 @@ namespace VendingMachine.Machine
                 case CurrencyType.Yen:
                     return new Yen();
                 case CurrencyType.Euro:
-                    return new Yen();
+                    return (ICurrency)new Euro();
                 default:
                     return new Yen();
             }

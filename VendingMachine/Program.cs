@@ -12,7 +12,7 @@ namespace VendingMachine
 {
     class Program
     {
-        public static SodaVendingMachine VendingMachine = null;
+       public static SodaVendingMachine VendingMachine = null;
         public static CreatedMenu MainMenu = null;
         static void Main(string[] args)
         {
@@ -27,18 +27,7 @@ namespace VendingMachine
             Console.ReadKey();
         }
 
-        public static void DrawMenu()
-        {
-            for (int i = 0; i < MainMenu.MenuItems.Count; i++)
-            {
-                for (int j = 0; j < MainMenu.MenuItems.Count; j++)
-                {
-                    Console.WriteLine(string.Format("{0} : {1}.", MainMenu.MenuItems[i].ConsoleKey, MainMenu.MenuItems[i].Item.ToString()));
-                }
-            }
-        }
-
-        private static CreatedMenu _GenerateMainMenu2()
+        private static CreatedMenu _GenerateMainMenu()
         {
             CreatedMenu mainMenu = new CreatedMenu();
             mainMenu.MenuItems.Add(new MenuItem(ConsoleKey.A, "Buy Item", _BuyItem));
@@ -50,14 +39,14 @@ namespace VendingMachine
         private static string _BuyItem()
         {
             CreatedMenu productMenu = CreatedMenu._GenerateMenu<Item>(VendingMachine.VendingMachineProducts);
-
-            while (productMenu.ShouldClose)
+           
+            while (!productMenu.ShouldClose)
             {
-                Console.Clear();
-                productMenu.DrawMenu();
-                Console.WriteLine("Please insert money...");
-                Money insertedMoney = new Money(VendingMachine.Currency.CurrencyType, Convert.ToInt32(Console.ReadLine()));
-                VendingMachine.InsertMoney(insertedMoney);
+            Console.Clear();
+            productMenu.DrawMenu();
+            Console.WriteLine("Please insert money...");
+            Money insertedMoney = new Money(VendingMachine.Currency.CurrencyType, Convert.ToInt32(Console.ReadLine()));
+            VendingMachine.InsertMoney(insertedMoney);
 
                 Console.WriteLine("Please select item...");
                 Item productItem = (Item)productMenu.PerformMenuItem(Console.ReadKey());
@@ -96,8 +85,17 @@ namespace VendingMachine
                 Item productItem = (Item)productMenu.PerformMenuItem(Console.ReadKey());
                 Console.WriteLine("Restock amount ...");
                 int amount = Int32.Parse(Console.ReadLine());
-                VendingMachine.Restock(productItem.Product, amount);
+                VendingMachine.Restock(productItem.Product,amount);
             }
+            return "Exting Restock Menu";
+        }
+
+        private static string _Restocked(Item productItem)
+        {
+
+            int amount = Int32.Parse(Console.ReadLine());
+            VendingMachine.Restock(productItem.Product, amount);
+
             return "Exting Restock Menu";
         }
     }

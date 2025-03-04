@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Currency\Denomination.cs" />
+    <Compile Include="Currency\Euro.cs" />
     <Compile Include="Currency\Dollar.cs" />
     <Compile Include="Currency\ICurrency.cs" />
     <Compile Include="Currency\CurrencyTypeEnum.cs" />
