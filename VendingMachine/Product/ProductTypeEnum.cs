@@ -10,5 +10,6 @@ namespace VendingMachine.Product
         Soda,
         Chips,
         Candy,
+        Toy,
     }
 }

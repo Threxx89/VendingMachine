@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CODE_GUIDELINES.md" />
     <Compile Include="Currency\Denomination.cs" />
     <Compile Include="Currency\Euro.cs" />
     <Compile Include="Currency\Dollar.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Currency\Yen.cs" />
     <Compile Include="Machine\Item.cs" />
     <Compile Include="Machine\IVendingMachine.cs" />
+    <Compile Include="Machine\ToyVendingMachine.cs" />
     <Compile Include="Menu\CreateMenu.cs" />
     <Compile Include="Menu\MenuItem.cs" />
     <Compile Include="Product\IProduct.cs" />
