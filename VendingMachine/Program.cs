@@ -66,7 +66,24 @@ namespace VendingMachine
             }
             return "Exiting Buy Menu";
         }
+        
+        private static string _Restock()
+        {
+            CreatedMenu productMenu = CreatedMenu._GenerateMenu<Item>(VendingMachine.VendingMachineProducts);
 
+            while (!productMenu.ShouldClose)
+            {
+                Console.Clear();
+                productMenu.DrawMenu();
+                Console.WriteLine("Please select item to restock ...");
+                Item productItem = (Item)productMenu.PerformMenuItem(Console.ReadKey());
+                Console.WriteLine("Restock amount ...");
+                int amount = Int32.Parse(Console.ReadLine());
+                VendingMachine.Restock(productItem.Product,amount);
+            }
+            return "Exting Restock Menu";
+        }
+        
         private static string _Exit()
         {
             MainMenu.ShouldClose = true;
